@@ -1,4 +1,4 @@
-# � Edge Impulse Data Collection
+# Edge Impulse Data Collection
 
 An Arduino App that streams the board's live camera feed to a browser and lets you capture and
 upload frames straight into an Edge Impulse project's dataset — everything is
@@ -20,12 +20,12 @@ served by the built-in `arduino:web_ui` Brick.
 
 ## Running the app
 
-```bash
-arduino-app-cli app start ~/ArduinoApps/edge-impulse-data-collection
-arduino-app-cli app logs ~/ArduinoApps/edge-impulse-data-collection --follow
-```
+Download as a ZIP file from the Github repository.
 
-Find your board's IP address with `hostname -I`, then open `http://<board-ip>:7000` in a browser.
+Then use the Arduino App Lab `Create new App button` in the My Apps section and import the ZIP file.
+
+Click on newly appeared Edge Impulse Data Collection App and then on Run button.
+
 
 ## Usage
 
