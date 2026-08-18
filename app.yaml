@@ -1,0 +1,6 @@
+name: Edge Impulse Data Collection
+description: Capture live camera frames and upload them to an Edge Impulse project's dataset.
+ports: []
+bricks:
+- arduino:web_ui: {}
+icon: 📸

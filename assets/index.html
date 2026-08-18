@@ -1,0 +1,48 @@
+<!--
+SPDX-FileCopyrightText: Copyright (C) Arduino s.r.l. and/or its affiliated companies
+
+SPDX-License-Identifier: MPL-2.0
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edge Impulse Data Collection</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>📸 Edge Impulse Data Collection</h1>
+      <p id="connection-status" class="status disconnected">Connecting…</p>
+
+      <img id="preview" src="/camera" alt="Live camera preview" />
+
+      <form id="upload-form">
+        <label for="api-key">Edge Impulse API key</label>
+        <input id="api-key" type="password" placeholder="ei_..." autocomplete="off" required />
+
+        <label for="category">Dataset split</label>
+        <select id="category">
+          <option value="training">Training</option>
+          <option value="testing">Testing</option>
+          <option value="split">Split automatically</option>
+        </select>
+
+        <label for="label">Label (optional)</label>
+        <input id="label" type="text" placeholder="e.g. duck" autocomplete="off" />
+
+        <button id="upload-btn" type="submit">Capture &amp; Upload</button>
+      </form>
+
+      <p id="result-message" class="result"></p>
+      <p id="upload-count">Uploaded this session: <span id="count">0</span></p>
+    </main>
+
+    <script src="libs/socket.io.min.js"></script>
+    <script src="libs/arduino.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
